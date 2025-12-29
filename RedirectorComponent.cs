@@ -6,7 +6,6 @@ namespace TheDirector;
 
 internal class RedirectorComponent : RedirectorComponentBase.Server
 {
-    private static readonly string PublicIp = new HttpClient().GetStringAsync("https://checkip.amazonaws.com/").GetAwaiter().GetResult().Trim();
 
     public override Task<ServerInstanceInfo> GetServerInstanceAsync(ServerInstanceRequest request, BlazeRpcContext context)
     {
@@ -17,8 +16,8 @@ internal class RedirectorComponent : RedirectorComponentBase.Server
             {
                 IpAddress = new IpAddress
                 {
-                    mHostname = PublicIp,
-                    mIp = Util.GetIPAddressAsUInt(PublicIp),
+                    mHostname = Program.PublicIp,
+                    mIp = Util.GetIPAddressAsUInt(Program.PublicIp),
                 },
             },
             mMessages = new List<string>

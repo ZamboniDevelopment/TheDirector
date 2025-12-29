@@ -13,9 +13,11 @@ internal class Program
     public const string Name = "TheDirector 1.0";
 
     private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+    public static string PublicIp;
 
     private static async Task Main(string[] args)
     {
+        PublicIp = new HttpClient().GetStringAsync("https://checkip.amazonaws.com/").GetAwaiter().GetResult().Trim();
         StartLogger();
         
         var redirectorTaskSdk2 = StartRedirectorServerSdk2();

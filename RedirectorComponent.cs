@@ -39,9 +39,24 @@ internal class RedirectorComponent : RedirectorComponentBase.Server
                 responseData.mAddress.IpAddress = responseData.mAddress.IpAddress.Value with { mPort = 13367 };
                 break;
             }
+            case "NHL12":
+            {
+                responseData.mAddress.IpAddress = responseData.mAddress.IpAddress.Value with { mPort = 26767 };
+                break;
+            }
+            case "NHL13":
+            {
+                responseData.mAddress.IpAddress = responseData.mAddress.IpAddress.Value with { mPort = 36767 };
+                break;
+            }
             case "NHL14":
             {
                 responseData.mAddress.IpAddress = responseData.mAddress.IpAddress.Value with { mPort = 34767 };
+                break;
+            }
+            case "NHL15":
+            {
+                responseData.mAddress.IpAddress = responseData.mAddress.IpAddress.Value with { mPort = 16567 };
                 break;
             }
             case "NHL16":

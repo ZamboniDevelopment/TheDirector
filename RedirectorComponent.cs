@@ -22,7 +22,7 @@ internal class RedirectorComponent : RedirectorComponentBase.Server
             },
             mMessages = new List<string>
             {
-                {"You are now connecting to a private server Zamboni\nNot affiliated with EA Sports"}
+                { "Our servers have moved!\nPlease update your RPCS3 config with:\ngosredirector.ea.com==57.131.155.88" }
             },
             mSecure = false,
         };
